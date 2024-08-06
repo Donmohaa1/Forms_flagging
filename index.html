@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Courts SARL Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="landing-page" class="section">
+            <h1>Golden Courts SARL</h1>
+            <p>To avoid delays, please ensure that the correct key details are provided.</p>
+            <img src="logogold.png" alt="Golden Courts SARL Logo" class="logo">
+            <button id="start-button">Start Now</button>
+        </div>
+
+        <form id="survey-form" class="hidden">
+            <!-- Section 1: Expedition -->
+            <div id="section-1" class="form-section active">
+                <h2>Section 1: Expedition</h2>
+                <label for="issuing-body">Issuing Body</label>
+                <select id="issuing-body" required>
+                    <option value="OGEFREM">OGEFREM</option>
+                </select>
+                <label for="certificate-type">Certificate Type</label>
+                <select id="certificate-type" required>
+                    <option value="Continuance">Continuance</option>
+                    <option value="Regional">Regional</option>
+                </select>
+                <label for="cargo-origin">Cargo Origin</label>
+                <select id="cargo-origin" required>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Outside Uganda">Outside Uganda</option>
+                </select>
+                <label for="shipment-route">Shipment Route</label>
+                <select id="shipment-route" required>
+                    <option value="In-bound">In-bound</option>
+                    <option value="Outbound">Outbound</option>
+                </select>
+                <label for="certificate-no">Certificate No.</label>
+                <input type="text" id="certificate-no" placeholder="Enter certificate no." required>
+                <label for="feri-ad-certificate">FERI/AD Certificate Copy</label>
+                <input type="file" id="feri-ad-certificate" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" required>
+                <label for="customs-decl-no">Customs Decl. No.</label>
+                <input type="text" id="customs-decl-no" placeholder="Enter customs declaration number" required>
+                <label for="customs-entry-doc">Customs Entry Document Copy</label>
+                <input type="file" id="customs-entry-doc" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" required>
+                <button type="button" class="back-button" data-back="landing-page">Home</button>
+                <button type="button" class="next-button" data-next="section-2">Next</button>
+            </div>
+            <!-- Section 2: Import Details -->
+            <div id="section-2" class="form-section hidden">
+                <h2>Section 2: Import Details</h2>
+                <label for="importer-name">Importer Name</label>
+                <input type="text" id="importer-name" placeholder="Enter importer name" required>
+                <label for="importer-contact">Importer Contact</label>
+                <input type="text" id="importer-contact" placeholder="Enter importer contact" required>
+                <button type="button" class="back-button" data-back="section-1">Back</button>
+                <button type="button" class="next-button" data-next="section-3">Next</button>
+            </div>
+            <!-- Section 3: Export Details -->
+            <div id="section-3" class="form-section hidden">
+                <h2>Section 3: Export Details</h2>
+                <label for="exporter-name">Exporter Name</label>
+                <input type="text" id="exporter-name" placeholder="Enter exporter name" required>
+                <label for="exporter-contact">Exporter Contact</label>
+                <input type="text" id="exporter-contact" placeholder="Enter exporter contact">
+                <label for="agent-name">Clearing/Forwarding Agent</label>
+                <input type="text" id="agent-name" placeholder="Enter agent name" required>
+                <label for="agent-contact">Clearing/Forwarding Agent Contact</label>
+                <input type="tel" id="agent-contact" placeholder="Enter agent contact" required>
+                <button type="button" class="back-button" data-back="section-2">Back</button>
+                <button type="button" class="next-button" data-next="section-4">Next</button>
+            </div>
+            <!-- Section 4: Transport & Cargo Details -->
+            <div id="section-4" class="form-section hidden">
+                <h2>Section 4: Transport & Cargo Details</h2>
+                <label for="transport-mode">Transport Mode</label>
+                <select id="transport-mode" required>
+                    <option value="Road">Road</option>
+                    <option value="Maritime">Maritime</option>
+                    <option value="Rail">Rail</option>
+                    <option value="Air">Air</option>
+                </select>
+                <label for="transporter-name">Transporter Name</label>
+                <input type="text" id="transporter-name" placeholder="Enter Transporter name" required>
+                <label for="vehicle-number">Vehicle Number</label>
+                <input type="text" id="vehicle-number" placeholder="Enter vehicle number" required>
+                <label for="vehicle-images">Vehicle Images</label>
+                <input type="file" id="vehicle-images" accept=".jpg,.jpeg,.png,.pdf,.mp4" required>
+                <label for="discharge-location">Discharge Location/Exit Border</label>
+                <input type="text" id="discharge-location" placeholder="Enter discharge location" required>
+                <label for="final-destination">Final Destination in DRC</label>
+                <input type="text" id="final-destination" placeholder="Enter final destination" required>
+                <button type="button" class="back-button" data-back="section-3">Back</button>
+                <button type="button" class="next-button" data-next="section-5">Next</button>
+            </div>
+            <!-- Section 5: Valuers -->
+            <div id="section-5" class="form-section hidden">
+                <h2>Section 5: Valuers</h2>
+                <label for="fob-currency">FOB Currency</label>
+                <select id="fob-currency" required>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="KES">KES</option>
+                    <option value="UGX">UGX</option>
+                    <option value="CNY">CNY</option>
+                    <option value="AED">AED</option>
+                </select>
+                <label for="fob-value">FOB Value</label>
+                <input type="text" id="fob-value" placeholder="Enter FOB value" required>
+                <label for="incoterm">Incoterm</label>
+                <select id="incoterm" required>
+                    <option value="CIP">CIP</option>
+                    <option value="FOB">FOB</option>
+                    <option value="CIF">CIF</option>
+                    <option value="CFR">CFR</option>
+                </select>
+                <label for="freight-currency">Freight Currency</label>
+                <select id="freight-currency" required>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="KES">KES</option>
+                    <option value="UGX">UGX</option>
+                    <option value="CNY">CNY</option>
+                    <option value="AED">AED</option>
+                </select>
+                <label for="freight-value">Freight Value</label>
+                <input type="text" id="freight-value" placeholder="Enter freight value" required>
+                <label for="invoice-copy">Commercial Invoice Copy</label>
+                <input type="file" id="invoice-copy" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" required>
+                <label for="supporting-docs">Additional Supporting Documents</label>
+                <input type="file" id="supporting-docs" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" multiple required>
+                <label for="validation-notes">Validation Notes</label>
+                <textarea id="validation-notes" placeholder="Enter validation notes" required></textarea>
+                <button type="button" class="back-button" data-back="section-4">Back</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
